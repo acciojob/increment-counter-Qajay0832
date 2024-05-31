@@ -1,9 +1,14 @@
 //your JS code here. If required.
-const btn=document.getElementById("incrementBtn");
-const counter=document.getElementById("counter")
-btn.onclick=(()=>{
-	let currentValue=counter.textContent;
-	alert(currentValue);
-	let incrementedValue = parseInt(counter.textContent) + 1;
-	counter.textContent=incrementedValue;
-	})
+document.addEventListener('DOMContentLoaded', function () {
+            let counterElement = document.getElementById('counter');
+            const incrementButton = document.getElementById('incrementBtn');
+ 
+            function handleIncrement() {
+                const currentValue = parseInt(counterElement.innerText);
+                alert(currentValue);
+                const incrementedValue = currentValue + 1;
+                counterElement.innerText = incrementedValue;
+            }
+ 
+            incrementButton.addEventListener('click', handleIncrement);
+        });
