@@ -2,6 +2,8 @@
 const btn=document.getElementById("incrementBtn");
 const counter=document.getElementById("counter")
 btn.onclick=(()=>{
-	alert(counter.textContent);
-	counter.textContent = parseInt(counter.textContent) + 1
+	let currentValue=counter.textContent;
+	alert(currentValue);
+	let incrementedValue = parseInt(counter.textContent) + 1;
+	counter.textContent=incrementedValue;
 	})
